@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2021479285452340492, guid: 427d3718996884a4d84aca28092660d3, type: 3}
       propertyPath: m_Name
-      value: ball3_0 Variant
+      value: ball-colombia_0
       objectReference: {fileID: 0}
     - target: {fileID: 5741733947142864593, guid: 427d3718996884a4d84aca28092660d3, type: 3}
       propertyPath: m_LocalPosition.x
