@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball4_0
       objectReference: {fileID: 0}
+    - target: {fileID: 5909089277158211075, guid: 7b65a1928848a41288c354dd113ad1ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -878,6 +882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball-cat_0
       objectReference: {fileID: 0}
+    - target: {fileID: 1611719132770787804, guid: 435c3a9b647ba40cbb6dc38f53b9f9e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5043743693730931201, guid: 435c3a9b647ba40cbb6dc38f53b9f9e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1318016
@@ -979,6 +987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball-anime_0
       objectReference: {fileID: 0}
+    - target: {fileID: 5740566485340005774, guid: 502ab1759f52c4679b1cff5b8ecb2c97, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1059,6 +1071,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934603526}
   m_CullTransparentMesh: 1
+--- !u!1 &943759137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1937783099277808902, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
+  m_PrefabInstance: {fileID: 6561100754829793036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &986601931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1070,6 +1087,10 @@ PrefabInstance:
     - target: {fileID: 2517223588338093284, guid: ec2d39340b2814026a908e1b4299ea2a, type: 3}
       propertyPath: m_Name
       value: ball-japan_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517223588338093284, guid: ec2d39340b2814026a908e1b4299ea2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8164456225133711161, guid: ec2d39340b2814026a908e1b4299ea2a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1127,6 +1148,10 @@ PrefabInstance:
     - target: {fileID: 897343003365084548, guid: 86349080fd1fb4b80b9de8b9db185d1c, type: 3}
       propertyPath: m_Name
       value: ball-colombia_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897343003365084548, guid: 86349080fd1fb4b80b9de8b9db185d1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6905989226784886361, guid: 86349080fd1fb4b80b9de8b9db185d1c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1563,6 +1588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball-ice_0
       objectReference: {fileID: 0}
+    - target: {fileID: 1867950594008335021, guid: 672358145692147a183f96c64b8eda39, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5354580956842475888, guid: 672358145692147a183f96c64b8eda39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.877495
@@ -1781,6 +1810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball0_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7377924982352939603, guid: c10452aef6f304ab8a5ee8957202fe09, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1993,6 +2026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball-steak_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8841548402629115009, guid: 62f3fc5a2b17247029812fc2649757b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2009,6 +2046,10 @@ PrefabInstance:
     - target: {fileID: 450790005194885513, guid: bf50effd050194284bd503b22ee2e3e8, type: 3}
       propertyPath: m_Name
       value: ball2_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450790005194885513, guid: bf50effd050194284bd503b22ee2e3e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6188657507171437140, guid: bf50effd050194284bd503b22ee2e3e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2065,15 +2106,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1937783099277808902, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
       propertyPath: m_Name
-      value: pin_0
+      value: kate
       objectReference: {fileID: 0}
     - target: {fileID: 8267602389386707197, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.834341
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: 8267602389386707197, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25392985
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 8267602389386707197, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2120,6 +2161,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8909651255366440889, guid: 427d3718996884a4d84aca28092660d3, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 943759137}
+    - target: {fileID: -8909651255366440889, guid: 427d3718996884a4d84aca28092660d3, type: 3}
+      propertyPath: launchDuration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2021479285452340492, guid: 427d3718996884a4d84aca28092660d3, type: 3}
       propertyPath: m_Name
       value: ball3_0
