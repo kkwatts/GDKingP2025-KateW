@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 229439752}
   - component: {fileID: 229439751}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Timer Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,11 +245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5909089277158211075, guid: 7b65a1928848a41288c354dd113ad1ca, type: 3}
       propertyPath: m_Name
-      value: ball4_0
+      value: Frog Ball
       objectReference: {fileID: 0}
     - target: {fileID: 5909089277158211075, guid: 7b65a1928848a41288c354dd113ad1ca, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -745,8 +745,9 @@ GameObject:
   - component: {fileID: 698058940}
   - component: {fileID: 698058942}
   - component: {fileID: 698058941}
+  - component: {fileID: 698058943}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Timer (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -870,6 +871,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698058939}
   m_CullTransparentMesh: 1
+--- !u!114 &698058943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698058939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7da7a1651734d60b5dc78471db5628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &800806795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -880,11 +893,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611719132770787804, guid: 435c3a9b647ba40cbb6dc38f53b9f9e5, type: 3}
       propertyPath: m_Name
-      value: ball-cat_0
+      value: Cat Ball
       objectReference: {fileID: 0}
     - target: {fileID: 1611719132770787804, guid: 435c3a9b647ba40cbb6dc38f53b9f9e5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5043743693730931201, guid: 435c3a9b647ba40cbb6dc38f53b9f9e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -985,11 +998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740566485340005774, guid: 502ab1759f52c4679b1cff5b8ecb2c97, type: 3}
       propertyPath: m_Name
-      value: ball-anime_0
+      value: Anime Ball
       objectReference: {fileID: 0}
     - target: {fileID: 5740566485340005774, guid: 502ab1759f52c4679b1cff5b8ecb2c97, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1086,11 +1099,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2517223588338093284, guid: ec2d39340b2814026a908e1b4299ea2a, type: 3}
       propertyPath: m_Name
-      value: ball-japan_0
+      value: Japan Ball
       objectReference: {fileID: 0}
     - target: {fileID: 2517223588338093284, guid: ec2d39340b2814026a908e1b4299ea2a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8164456225133711161, guid: ec2d39340b2814026a908e1b4299ea2a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1147,11 +1160,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 897343003365084548, guid: 86349080fd1fb4b80b9de8b9db185d1c, type: 3}
       propertyPath: m_Name
-      value: ball-colombia_0
+      value: Colombia Ball
       objectReference: {fileID: 0}
     - target: {fileID: 897343003365084548, guid: 86349080fd1fb4b80b9de8b9db185d1c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6905989226784886361, guid: 86349080fd1fb4b80b9de8b9db185d1c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1586,11 +1599,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1867950594008335021, guid: 672358145692147a183f96c64b8eda39, type: 3}
       propertyPath: m_Name
-      value: ball-ice_0
+      value: Ice Ball
       objectReference: {fileID: 0}
     - target: {fileID: 1867950594008335021, guid: 672358145692147a183f96c64b8eda39, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5354580956842475888, guid: 672358145692147a183f96c64b8eda39, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1766,6 +1779,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1276693610152627259, guid: c10452aef6f304ab8a5ee8957202fe09, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3873279881170291086, guid: c10452aef6f304ab8a5ee8957202fe09, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.9057138
@@ -1808,11 +1825,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377924982352939603, guid: c10452aef6f304ab8a5ee8957202fe09, type: 3}
       propertyPath: m_Name
-      value: ball0_0
+      value: Tech1 Ball
       objectReference: {fileID: 0}
     - target: {fileID: 7377924982352939603, guid: c10452aef6f304ab8a5ee8957202fe09, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1910,7 +1927,7 @@ GameObject:
   - component: {fileID: 2043336628}
   - component: {fileID: 2043336627}
   m_Layer: 5
-  m_Name: Panel (1)
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2024,11 +2041,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8841548402629115009, guid: 62f3fc5a2b17247029812fc2649757b8, type: 3}
       propertyPath: m_Name
-      value: ball-steak_1
+      value: Steak Ball
       objectReference: {fileID: 0}
     - target: {fileID: 8841548402629115009, guid: 62f3fc5a2b17247029812fc2649757b8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2045,11 +2062,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 450790005194885513, guid: bf50effd050194284bd503b22ee2e3e8, type: 3}
       propertyPath: m_Name
-      value: ball2_0
+      value: Tech2 Ball
       objectReference: {fileID: 0}
     - target: {fileID: 450790005194885513, guid: bf50effd050194284bd503b22ee2e3e8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6188657507171437140, guid: bf50effd050194284bd503b22ee2e3e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2106,7 +2123,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1937783099277808902, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
       propertyPath: m_Name
-      value: kate
+      value: Pin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267602389386707197, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267602389386707197, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8267602389386707197, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2171,7 +2196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2021479285452340492, guid: 427d3718996884a4d84aca28092660d3, type: 3}
       propertyPath: m_Name
-      value: ball3_0
+      value: Tech3 Ball
       objectReference: {fileID: 0}
     - target: {fileID: 5741733947142864593, guid: 427d3718996884a4d84aca28092660d3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2224,16 +2249,16 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 2024129391}
+  - {fileID: 1249552740}
+  - {fileID: 6561100754829793036}
+  - {fileID: 1872259157}
+  - {fileID: 2121631676}
   - {fileID: 8345967726706921694}
   - {fileID: 800806795}
-  - {fileID: 6561100754829793036}
-  - {fileID: 1249552740}
-  - {fileID: 2024129391}
   - {fileID: 931791541}
   - {fileID: 1143109334}
   - {fileID: 1750360393}
   - {fileID: 986601931}
   - {fileID: 2053191504}
-  - {fileID: 1872259157}
-  - {fileID: 2121631676}
   - {fileID: 240764633}

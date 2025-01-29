@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class BallBehavior : MonoBehaviour
-{
+public class BallBehavior : MonoBehaviour {
     public float minX;
     public float maxX;
     public float minY;
@@ -32,9 +31,6 @@ public class BallBehavior : MonoBehaviour
 
         cooldown = 2;
 
-        //secondsToMaxSpeed = 30;
-        //minSpeed = 0.75f;
-        //maxSpeed = 2.0f;
         targetPosition = getRandomPosition();
     }
 
@@ -42,7 +38,6 @@ public class BallBehavior : MonoBehaviour
     void Update() {
         Vector2 currentPos = transform.position;
         float distance = Vector2.Distance(currentPos, targetPosition);
-        Debug.Log(targetPosition);
 
         if (!onCooldown()) {
             if (launching) {
@@ -89,14 +84,6 @@ public class BallBehavior : MonoBehaviour
             }
         }
 
-        //float timeLaunching = Time.time - timeLastLaunch;
-        //if (timeLaunching > launchDuration) {
-        //    startCooldown();
-        //}
-        //else {
-        //    launch();
-        //}
-
         getRandomPosition();
     }
 
@@ -120,8 +107,6 @@ public class BallBehavior : MonoBehaviour
             timeLaunchStart = Time.time;
             launching = true;
         }
-
-        //cooldown = Random.Range(0.5f, 3.5f);
     }
 
     public bool onCooldown() {

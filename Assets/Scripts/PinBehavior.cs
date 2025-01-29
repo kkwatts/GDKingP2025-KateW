@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class PinBehavior : MonoBehaviour
-{
+public class PinBehavior : MonoBehaviour {
     public float speed;
     public Vector2 newPosition;
     public Vector3 mousePosG;
