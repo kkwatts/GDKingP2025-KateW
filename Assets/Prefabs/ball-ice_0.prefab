@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball-ice_0
       objectReference: {fileID: 0}
+    - target: {fileID: 2391791839471888681, guid: 427d3718996884a4d84aca28092660d3, type: 3}
+      propertyPath: m_Radius
+      value: 4.396432
+      objectReference: {fileID: 0}
+    - target: {fileID: 2391791839471888681, guid: 427d3718996884a4d84aca28092660d3, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.04972475
+      objectReference: {fileID: 0}
     - target: {fileID: 5741733947142864593, guid: 427d3718996884a4d84aca28092660d3, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.14
