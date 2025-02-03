@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1937783099277808902, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
       propertyPath: m_Name
-      value: pin_0 Variant
+      value: pin-frog_0
       objectReference: {fileID: 0}
     - target: {fileID: 8239042129496888259, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
       propertyPath: m_Sprite
@@ -55,6 +55,14 @@ PrefabInstance:
     - target: {fileID: 8267602389386707197, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551864226020198438, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551864226020198438, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 9.33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

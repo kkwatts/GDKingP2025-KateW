@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.1612415
       objectReference: {fileID: 0}
+    - target: {fileID: 3746276024014585819, guid: 427d3718996884a4d84aca28092660d3, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5741733947142864593, guid: 427d3718996884a4d84aca28092660d3, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.12
