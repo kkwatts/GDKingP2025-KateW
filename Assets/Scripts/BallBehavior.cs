@@ -8,7 +8,7 @@ public class BallBehavior : MonoBehaviour {
     public float minSpeed;
     public float maxSpeed;
     public int secondsToMaxSpeed;
-    Vector2 targetPosition;
+    public Vector2 targetPosition;
 
     public GameObject target;
     Rigidbody2D body;
@@ -90,12 +90,10 @@ public class BallBehavior : MonoBehaviour {
             body.MovePosition(newPos);
         }
         else {
-            if (launching)
-            {
+            if (launching) {
                 startCooldown();
             }
-            else
-            {
+            else {
                 targetPosition = getRandomPosition();
             }
         }

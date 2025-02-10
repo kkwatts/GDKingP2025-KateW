@@ -109,12 +109,14 @@ MonoBehaviour:
   minSpeed: 0.01
   maxSpeed: 5
   secondsToMaxSpeed: 30
-  target: {fileID: 1937783099277808902, guid: 1f6426cd56126426cb58b596568325ec, type: 3}
+  targetPosition: {x: 0, y: 0}
+  target: {fileID: 0}
+  rerouting: 0
   minLaunchSpeed: 0.02
   maxLaunchSpeed: 5
   minTimeToLaunch: 1
   maxTimeToLaunch: 3
-  cooldown: 2
+  cooldown: 10
   launching: 0
   launchDuration: 3
   timeLastLaunch: 0
