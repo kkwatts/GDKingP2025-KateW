@@ -40,7 +40,7 @@ public class PinBehavior : MonoBehaviour {
         string collided = collision.gameObject.tag;
         Debug.Log("Collided with " + collided);
         if (collided == "Ball" || collided == "Wall") {
-            Debug.Log("Game over");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         }
     }
 

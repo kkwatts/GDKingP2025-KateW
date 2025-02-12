@@ -1,7 +1,16 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
     public void GoToGame() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("MainGame");
+    }
+
+    public void GoToMenu() {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void RestartGameScene() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
