@@ -26,11 +26,6 @@ public class BallBehavior : MonoBehaviour {
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        //minX = -4.4f;
-        //maxX = 4.44f;
-        //minY = -4.06f;
-        //maxY = 4.06f;
-
         cooldown = 2;
 
         targetPosition = GetRandomPosition();
@@ -166,5 +161,9 @@ public class BallBehavior : MonoBehaviour {
         maxX = maX;
         minY = miY;
         maxY = maY;
+    }
+
+    public void SetTarget(GameObject pin) {
+        target = pin;
     }
 }

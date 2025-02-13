@@ -17,6 +17,16 @@ public class SpawningBehavior : MonoBehaviour {
         SpawnBall();
     }
 
+    // Update is called once per frame
+    void Update() {
+        float currentTime = Time.time;
+        float timeElapsed = currentTime - startTime;
+        if (timeElapsed > spawnRatio) {
+            SpawnBall();
+            spawnRatio = Random.Range(2f, 4.5f);
+        }
+    }
+
     void SpawnBall() {
         int numVariants = ballVariants.Length;
         if (numVariants > 0) {
@@ -24,7 +34,9 @@ public class SpawningBehavior : MonoBehaviour {
             newObject = Instantiate(ballVariants[selection], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             BallBehavior ballBehavior = newObject.GetComponent<BallBehavior>();
             ballBehavior.SetBounds(minX, maxX, minY, maxY);
+            ballBehavior.SetTarget(targetObject);
             ballBehavior.InitialPosition();
         }
+        startTime = Time.time;
     }
 }
