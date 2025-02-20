@@ -3,7 +3,9 @@ using UnityEngine;
 public class SpawningBehavior : MonoBehaviour {
     public GameObject[] ballVariants;
     public GameObject targetObject;
+    public Pins pinsDB;
     GameObject newObject;
+
     public float startTime;
     public float spawnRatio = 1.0f;
 
@@ -15,6 +17,7 @@ public class SpawningBehavior : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
         SpawnBall();
+        SpawnPin();
     }
 
     // Update is called once per frame
@@ -38,5 +41,9 @@ public class SpawningBehavior : MonoBehaviour {
             ballBehavior.InitialPosition();
         }
         startTime = Time.time;
+    }
+
+    void SpawnPin() {
+        targetObject = Instantiate(pinsDB.GetPin(CharacterManager.selection).prefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
     }
 }
