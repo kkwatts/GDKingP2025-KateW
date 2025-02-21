@@ -2,11 +2,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class DashIconBehavior : MonoBehaviour {
+public class InvinIconBehavior : MonoBehaviour {
     TextMeshProUGUI tmp;
     Image overlay;
     float cooldown = 0.0f;
-    float cooldownRate = 1.0f;
+    float cooldownRate = 5.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -19,12 +19,12 @@ public class DashIconBehavior : MonoBehaviour {
         }
         overlay.fillAmount = 0.0f;
 
-        cooldownRate = PinBehavior.dashCooldownRate;
+        cooldownRate = PinBehavior.invinCooldownRate;
     }
 
     // Update is called once per frame
     void Update() {
-        cooldown = PinBehavior.dashCooldown;
+        cooldown = PinBehavior.invinCooldown;
 
         string message = "";
         if (cooldown > 0) {

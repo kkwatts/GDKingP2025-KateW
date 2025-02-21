@@ -3,19 +3,30 @@ using UnityEngine;
 public class PinBehavior : MonoBehaviour {
     public float dashSpeed = 5.0f;
     public float baseSpeed = 2.0f;
-    public bool dashing;
     public float speed;
+
+    public bool dashing;
+    public bool invincible;
+
     public float dashDuration;
     public float timeDashStart;
-    public static float cooldownRate = 1.0f;
-    public static float cooldown;
+    public float invinDuration;
+    public float timeInvinStart;
+
+    public static float dashCooldownRate = 1.0f;
+    public static float dashCooldown;
+    public static float invinCooldownRate = 5.0f;
+    public static float invinCooldown;
+
     public float timeLastDashEnded;
+    public float timeLastInvinEnded;
 
     public Vector2 newPosition;
     public Vector3 mousePosG;
 
     Camera cam;
     Rigidbody2D body;
+    SpriteRenderer render;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -23,10 +34,14 @@ public class PinBehavior : MonoBehaviour {
         cam = Camera.main;
         body = GetComponent<Rigidbody2D>();
         dashing = false;
+        invincible = false;
+        render = GetComponent<SpriteRenderer>();
+        render.color = new Color(render.color.r, render.color.g, render.color.b, 1.0f);
     }
 
     void Update() {
         Dash();
+        Invincibility();
     }
 
     // Update is called once per frame
@@ -39,7 +54,7 @@ public class PinBehavior : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         string collided = collision.gameObject.tag;
         Debug.Log("Collided with " + collided);
-        if (collided == "Ball" || collided == "Wall") {
+        if ((collided == "Ball" || collided == "Wall") && !invincible) {
             UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         }
     }
@@ -51,16 +66,37 @@ public class PinBehavior : MonoBehaviour {
                 dashing = false;
                 speed = baseSpeed;
                 timeLastDashEnded = Time.time;
-                cooldown = cooldownRate;
+                dashCooldown = dashCooldownRate;
             }
         }
         else {
-            cooldown -= Time.deltaTime;
-            if (Input.GetMouseButtonDown(0) && cooldown <= 0) {
-                cooldown = 0;
+            dashCooldown -= Time.deltaTime;
+            if (Input.GetMouseButtonDown(0) && dashCooldown <= 0) {
+                dashCooldown = 0;
                 dashing = true;
                 speed = dashSpeed;
                 timeDashStart = Time.time;
+            }
+        }
+    }
+
+    private void Invincibility() {
+        if (invincible) {
+            float howLong = Time.time - timeInvinStart;
+            if (howLong > invinDuration) {
+                invincible = false;
+                timeLastInvinEnded = Time.time;
+                invinCooldown = invinCooldownRate;
+                render.color = new Color(render.color.r, render.color.g, render.color.b, 1.0f);
+            }
+        }
+        else {
+            invinCooldown -= Time.deltaTime;
+            if (Input.GetKeyDown(KeyCode.Space) && invinCooldown <= 0) {
+                invinCooldown = 0;
+                invincible = true;
+                timeInvinStart = Time.time;
+                render.color = new Color(render.color.r, render.color.g, render.color.b, 0.5f);
             }
         }
     }

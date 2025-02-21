@@ -10,6 +10,10 @@ public class MenuScript : MonoBehaviour {
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void GoToCharacterSelect() {
+        SceneManager.LoadScene("CharacterSelection");
+    }
+
     public void RestartGameScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

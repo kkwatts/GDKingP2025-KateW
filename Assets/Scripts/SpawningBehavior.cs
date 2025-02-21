@@ -16,8 +16,8 @@ public class SpawningBehavior : MonoBehaviour {
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        SpawnBall();
         SpawnPin();
+        SpawnBall();
     }
 
     // Update is called once per frame
