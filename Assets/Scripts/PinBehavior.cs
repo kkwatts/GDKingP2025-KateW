@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PinBehavior : MonoBehaviour {
     public float dashSpeed = 5.0f;
@@ -24,6 +25,8 @@ public class PinBehavior : MonoBehaviour {
     public Vector2 newPosition;
     public Vector3 mousePosG;
 
+    public AudioSource[] audioSources;
+
     Camera cam;
     Rigidbody2D body;
     SpriteRenderer render;
@@ -37,6 +40,7 @@ public class PinBehavior : MonoBehaviour {
         invincible = false;
         render = GetComponent<SpriteRenderer>();
         render.color = new Color(render.color.r, render.color.g, render.color.b, 1.0f);
+        audioSources = GetComponents<AudioSource>();
     }
 
     void Update() {
@@ -56,6 +60,7 @@ public class PinBehavior : MonoBehaviour {
         Debug.Log("Collided with " + collided);
         if ((collided == "Ball" || collided == "Wall") && !invincible) {
             UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
+            StartCoroutine(WaitForSoundAndTransition());
         }
     }
 
@@ -76,6 +81,10 @@ public class PinBehavior : MonoBehaviour {
                 dashing = true;
                 speed = dashSpeed;
                 timeDashStart = Time.time;
+                if (audioSources[1].isPlaying) {
+                    audioSources[1].Stop();
+                }
+                audioSources[1].Play();
             }
         }
     }
@@ -99,5 +108,11 @@ public class PinBehavior : MonoBehaviour {
                 render.color = new Color(render.color.r, render.color.g, render.color.b, 0.5f);
             }
         }
+    }
+
+    private IEnumerator WaitForSoundAndTransition() {
+        audioSources[0].Play();
+        yield return new WaitForSeconds(audioSources[0].clip.length);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 }

@@ -1,20 +1,28 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
     public void GoToGame() {
-        SceneManager.LoadScene("MainGame");
+        StartCoroutine(WaitForSoundAndTransition("MainGame"));
     }
 
     public void GoToMenu() {
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(WaitForSoundAndTransition("MainMenu"));
     }
 
     public void GoToCharacterSelect() {
-        SceneManager.LoadScene("CharacterSelection");
+        StartCoroutine(WaitForSoundAndTransition("CharacterSelection"));
     }
 
     public void RestartGameScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private IEnumerator WaitForSoundAndTransition(string sceneName) {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+        SceneManager.LoadScene(sceneName);
     }
 }
