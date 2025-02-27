@@ -12,6 +12,7 @@ public class BallBehavior : MonoBehaviour {
 
     public GameObject target;
     Rigidbody2D body;
+    GameObject score;
 
     public bool rerouting;
     public float minLaunchSpeed;
@@ -23,22 +24,29 @@ public class BallBehavior : MonoBehaviour {
     public float launchDuration;
     public float timeLastLaunch;
     public float timeLaunchStart;
+    public bool hasBeenDodged;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
         cooldown = 2;
+        launching = false;
+        rerouting = true;
+        hasBeenDodged = false;
 
+        body = GetComponent<Rigidbody2D>();
         targetPosition = GetRandomPosition();
-        InitialPosition();
+        score = GameObject.FindGameObjectWithTag("Score");
+
+        body.position = transform.position;
     }
 
-    public void InitialPosition() {
+    /*public void InitialPosition() {
         body = GetComponent<Rigidbody2D>();
         body.position = GetRandomPosition();
         targetPosition = GetRandomPosition();
         launching = false;
         rerouting = true;
-    }
+    }*/
 
     // Update is called once per frame
     void FixedUpdate() {
@@ -89,6 +97,15 @@ public class BallBehavior : MonoBehaviour {
         }
 
         GetRandomPosition();
+
+        if (Mathf.Abs(transform.position.x - target.transform.position.x) <= 2f && Mathf.Abs(transform.position.y - target.transform.position.y) <= 2f)
+        {
+            hasBeenDodged = true;
+        }
+        else if (hasBeenDodged) {
+            hasBeenDodged = false;
+            score.GetComponent<ScoreBehavior>().AddToScore();
+        }
     }
 
     Vector2 GetRandomPosition() {

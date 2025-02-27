@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Pin
   - Overlay
+  - Score
   layers:
   - Default
   - TransparentFX
