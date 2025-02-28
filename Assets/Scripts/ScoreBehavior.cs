@@ -3,7 +3,7 @@ using TMPro;
 
 public class ScoreBehavior : MonoBehaviour {
     private TextMeshProUGUI textField;
-    private float score;
+    private int score;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -23,5 +23,9 @@ public class ScoreBehavior : MonoBehaviour {
 
     public void AddToScore() {
         score++;
+    }
+
+    public int GetScore() {
+        return score;
     }
 }

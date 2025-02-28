@@ -9,16 +9,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8909651255366440889, guid: 427d3718996884a4d84aca28092660d3, type: 3}
-      propertyPath: maxSpeed
-      value: 4.5
+      propertyPath: cooldown
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -8909651255366440889, guid: 427d3718996884a4d84aca28092660d3, type: 3}
-      propertyPath: minSpeed
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: -8909651255366440889, guid: 427d3718996884a4d84aca28092660d3, type: 3}
-      propertyPath: secondsToMaxSpeed
-      value: 27
+      propertyPath: maxLaunchSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2021479285452340492, guid: 427d3718996884a4d84aca28092660d3, type: 3}
       propertyPath: m_Name

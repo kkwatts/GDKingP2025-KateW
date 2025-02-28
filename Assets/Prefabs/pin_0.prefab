@@ -117,6 +117,7 @@ MonoBehaviour:
   timeLastInvinEnded: 0
   newPosition: {x: 0, y: 0}
   mousePosG: {x: 0, y: 0, z: 0}
+  audioSources: []
 --- !u!50 &3523927185153882708
 Rigidbody2D:
   serializedVersion: 5

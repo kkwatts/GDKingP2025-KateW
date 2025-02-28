@@ -41,6 +41,8 @@ public class PinBehavior : MonoBehaviour {
         render = GetComponent<SpriteRenderer>();
         render.color = new Color(render.color.r, render.color.g, render.color.b, 1.0f);
         audioSources = GetComponents<AudioSource>();
+        dashCooldown = 0;
+        invinCooldown = 0;
     }
 
     void Update() {

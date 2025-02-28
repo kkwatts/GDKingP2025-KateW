@@ -107,20 +107,21 @@ MonoBehaviour:
   minY: 0
   maxY: 0
   minSpeed: 0.01
-  maxSpeed: 5
+  maxSpeed: 2.5
   secondsToMaxSpeed: 30
   targetPosition: {x: 0, y: 0}
   target: {fileID: 0}
   rerouting: 0
-  minLaunchSpeed: 0.02
-  maxLaunchSpeed: 5
+  minLaunchSpeed: 0.1
+  maxLaunchSpeed: 8
   minTimeToLaunch: 1
-  maxTimeToLaunch: 3
+  maxTimeToLaunch: 6
   cooldown: 10
   launching: 0
   launchDuration: 3
   timeLastLaunch: 0
   timeLaunchStart: 0
+  hasBeenDodged: 0
 --- !u!58 &2391791839471888681
 CircleCollider2D:
   m_ObjectHideFlags: 0

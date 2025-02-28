@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class BallBehavior : MonoBehaviour {
     public float minX;
@@ -13,6 +14,7 @@ public class BallBehavior : MonoBehaviour {
     public GameObject target;
     Rigidbody2D body;
     GameObject score;
+    SpriteRenderer render;
 
     public bool rerouting;
     public float minLaunchSpeed;
@@ -26,18 +28,23 @@ public class BallBehavior : MonoBehaviour {
     public float timeLaunchStart;
     public bool hasBeenDodged;
 
+    private bool launchReady;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
         cooldown = 2;
         launching = false;
         rerouting = true;
         hasBeenDodged = false;
+        launchReady = true;
 
         body = GetComponent<Rigidbody2D>();
+        render = GetComponent<SpriteRenderer>();
         targetPosition = GetRandomPosition();
         score = GameObject.FindGameObjectWithTag("Score");
 
         body.position = transform.position;
+        render.color = new Color(render.color.r, render.color.g, render.color.b, 1.0f);
     }
 
     /*public void InitialPosition() {
@@ -84,8 +91,10 @@ public class BallBehavior : MonoBehaviour {
 
             currentSpeed *= Time.deltaTime;
 
-            Vector2 newPos = Vector2.MoveTowards(currentPos, targetPosition, currentSpeed);
-            body.MovePosition(newPos);
+            if (launchReady) {
+                Vector2 newPos = Vector2.MoveTowards(currentPos, targetPosition, currentSpeed);
+                body.MovePosition(newPos);
+            }
         }
         else {
             if (launching) {
@@ -123,12 +132,16 @@ public class BallBehavior : MonoBehaviour {
     }
 
     public void Launch() {
+        launchReady = false;
+
         Rigidbody2D targetBody = target.GetComponent<Rigidbody2D>();
         targetPosition = targetBody.position;
-        if (!launching) {
+        /*if (!launching) {
             timeLaunchStart = Time.time;
             launching = true;
-        }
+        }*/
+
+        StartCoroutine(Wait(3));
     }
 
     public bool OnCooldown() {
@@ -152,7 +165,10 @@ public class BallBehavior : MonoBehaviour {
             targetPosition = GetRandomPosition();
         }
         if (collision.gameObject.tag == "Ball") {
-            Reroute(collision);
+            if (rerouting) {
+                collision.gameObject.GetComponent<BallBehavior>().rerouting = false;
+                Reroute(collision);
+            }
         }
         Debug.Log(this + " collided with: " + collision.gameObject.name);
     }
@@ -160,7 +176,7 @@ public class BallBehavior : MonoBehaviour {
     public void Reroute(Collision2D collision) {
         GameObject otherBall = collision.gameObject;
         if (rerouting) {
-            otherBall.GetComponent<BallBehavior>().rerouting = false;
+            //otherBall.GetComponent<BallBehavior>().rerouting = false;
             Rigidbody2D ballBody = otherBall.GetComponent<Rigidbody2D>();
             Vector2 contact = collision.GetContact(0).normal;
             targetPosition = Vector2.Reflect(targetPosition, contact).normalized;
@@ -182,5 +198,18 @@ public class BallBehavior : MonoBehaviour {
 
     public void SetTarget(GameObject pin) {
         target = pin;
+    }
+
+    private IEnumerator Wait(float seconds) {
+        launchReady = false;
+        render.color = new Color(render.color.r, render.color.g, render.color.b, 0.5f);
+        yield return new WaitForSeconds(1.5f);
+
+        launchReady = true;
+        if (!launching) {
+            timeLaunchStart = Time.time;
+            launching = true;
+        }
+        render.color = new Color(render.color.r, render.color.g, render.color.b, 1.0f);
     }
 }
